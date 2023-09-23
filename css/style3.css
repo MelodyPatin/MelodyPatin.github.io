@@ -1,0 +1,493 @@
+:root {
+    --couleur-principale: #1FB9B7; 
+}
+/* jaune #FDD734*/
+
+body {
+    background-image: url(../Images/BG/BG_bleu.jpg);
+    background-size: 400px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+section, header, footer {
+    background-color: white;
+    margin: 1em 2em 2em 2em;
+    padding: 2em;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* HEADER*/
+
+.FirstLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Menu {
+    padding-top: 2em;
+}
+
+.Line {
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 5px;
+    border-radius: 2.5px;
+}
+
+nav a {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: var(--couleur-principale);
+    border-radius: 10px;
+}
+
+/* ACCUEIL */
+
+/* A revoir avec JS pour adapter dynamiquement la police au bloc */
+.Text-box p:nth-child(1) {
+    font-size: 60px;
+    line-height: 1px;
+}
+
+.Text-box p:nth-child(2) {
+    font-size: 35px;
+}
+
+.Text-box p:nth-child(3) {
+    font-size: 15px;
+}
+
+.Text-box p {
+    line-height: 20px;
+    
+}
+
+.Text-box {
+    transition: transform 1s;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.Text-box:hover {
+    transform: scale(1.2);
+}
+
+img {
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.ContactList p, .ContactList a {
+    font-size: 1.2em;
+    margin: 0em;
+    line-height: 2em;
+}
+
+.Social {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Social a {
+    background-color: var(--couleur-principale);
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 0.9em;
+    color: white;
+    transition: transform 1s;
+}
+
+.Social a:hover {
+    transform: scale(1.2);
+}
+
+/*EXPERIENCE & COMPETENCES*/
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 0.5em;
+    border: var(--couleur-principale) solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.Infos {
+    padding-bottom: 2em;
+    border-bottom: var(--couleur-principale) solid 1px;
+}
+
+.Info--last {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.Button {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Button p {
+    background-color: var(--couleur-principale);
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 0.9em;
+    color: white;
+    transition: transform 1s;
+    margin-bottom: 0;
+}
+
+.Button p:hover {
+    transform: scale(1.2);
+}  
+
+
+/*EXPERIENCE */
+
+.Profession {
+    padding-top: 1em;
+}
+
+.Profession, .Entreprise {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.Lieu-Date {
+    margin: 0;
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+
+.Work p {
+    font-size: 1em;
+    margin: 0.5em 0em;
+}
+
+/* COMPETENCES*/
+
+.Pourcentage {
+    border: var(--couleur-principale) solid 1px;
+    border-radius: 10px;
+    width: 100%;
+    height: 1.5em;   
+    position: relative;
+    overflow: hidden;
+}
+
+.Grid-Compétence {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3em;
+}
+
+.Grid-Compétence p {
+    font-size: 1em;
+    margin: 1em 0 0.2em 0.2em;
+}
+
+.Background-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--couleur-principale);
+    animation: revealBackground 4s ease-in-out alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+.Background-mask--HTML{
+    width: 70%;
+}
+
+.Background-mask--CSS3{
+    width: 70%;
+}
+
+.Background-mask--PHP{
+    width: 10%;
+}
+
+.Background-mask--MySQL{
+    width: 10%;
+}
+
+.Background-mask--SketchUp{
+    width: 90%;
+}
+
+.Background-mask--FileMaker{
+    width: 90%;
+}
+
+@keyframes revealBackground {
+    0%{
+        transform: translateX(-100%);}
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+.Flex-Compétence {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.circle-wrap {
+    margin-bottom: 1em;
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    border: var(--couleur-principale) solid 1px;
+    position: relative;
+}
+
+.circle-wrap .circle .mask,.circle-wrap .circle .fill {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+    position: absolute;
+}
+
+.circle-wrap .circle .mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: var(--couleur-principale);
+    position:absolute;
+}
+
+.circle-wrap .circle .mask.full,.circle-wrap .circle .fill {
+    animation-name: rotate_Fr;
+    animation: rotate_Fr ease-in-out 4s alternate-reverse;
+    animation-iteration-count: infinite;
+    transform: rotate(180deg)
+}
+
+   
+@keyframes rotate_Fr {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.inside-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    border: var(--couleur-principale) solid 1px;
+    line-height: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 25px 25px 0 0;
+    z-index: 1;
+    font-size: 1.2em;
+}
+
+.circle-wrap_eng {
+    margin-bottom: 1em;
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    border: var(--couleur-principale) solid 1px;
+    position: relative;
+}
+
+.circle-wrap_eng .circle_eng .mask_eng,.circle-wrap_eng .circle_eng .fill_eng {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.circle-wrap_eng .circle_eng .mask_eng {
+    clip: rect(0px, 150px, 150px, 75px);
+    position: absolute;
+}
+
+.circle-wrap_eng .circle_eng .mask_eng .fill_eng {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: var(--couleur-principale);
+    position:absolute;
+}
+
+.circle-wrap_eng .circle_eng .mask_eng.full_eng,.circle-wrap_eng .circle_eng .fill_eng {
+    animation-name: rotate_Eng;
+    animation: rotate_Eng ease-in-out 4s alternate-reverse;
+    animation-iteration-count: infinite;
+    transform: rotate(155deg)
+}
+   
+@keyframes rotate_Eng {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(155deg);
+    }
+    
+}
+
+.circle-wrap_es {
+    margin-bottom: 1em;
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    border: var(--couleur-principale) solid 1px;
+    position: relative;
+}
+
+.circle-wrap_es .circle_es .mask_es,.circle-wrap_es .circle_es .fill_es {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.circle-wrap_es .circle_es .mask_es {
+    clip: rect(0px, 150px, 150px, 75px);
+    position: absolute;
+}
+
+.circle-wrap_es .circle_es .mask_es .fill_es {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: var(--couleur-principale);
+    position:absolute;
+}
+
+.circle-wrap_es .circle_es .mask_es.full_es,.circle-wrap_es .circle_es .fill_es {
+    animation-name: rotate_Es;
+    animation: rotate_Es ease-in-out 4s alternate-reverse;
+    animation-iteration-count: infinite;
+    transform: rotate(135deg)
+}
+   
+@keyframes rotate_Es {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+.circle-wrap_it {
+    margin-bottom: 1em;
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    border: var(--couleur-principale) solid 1px;
+    position: relative;
+}
+
+.circle-wrap_it .circle_it .mask_it,.circle-wrap_it .circle_it .fill_it {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.circle-wrap_it .circle_it .mask_it {
+    clip: rect(0px, 150px, 150px, 75px);
+    position: absolute;
+}
+
+.circle-wrap_it .circle_it .mask_it .fill_it {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: var(--couleur-principale);
+    position:absolute;
+}
+
+.circle-wrap_it .circle_it .mask_it.full_it,.circle-wrap_it .circle_it .fill_it {
+    animation-name: rotate_It;
+    animation: rotate_It ease-in-out 4s alternate-reverse;
+    animation-iteration-count: infinite;
+    transform: rotate(90deg)
+}
+   
+@keyframes rotate_It {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* PORTFOLIO */
+
+#Portfolio p {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* LOISIRS */
+
+.icone {
+    display: flex;
+    padding: 0.5em;
+    background-color: var(--couleur-principale);
+    border-radius: 10px;
+    align-items: center;
+    margin: 2em 0;
+    gap: 1em;
+}
+
+.icone img {
+    width: 3.5em;
+    padding: 0;
+}
+
+.icone p {
+    font-size: 1.2em;
+    color: white;
+    margin: 0;
+}
+
+/* FOOTER */
+
+footer p {
+    margin: 0;
+}

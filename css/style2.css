@@ -1,20 +1,132 @@
+body {
+    background-image: url(../Images/Arriere\ plan\ 2.jpg);
+    background-size: 600px;
+    margin: auto;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    transition: height 2s ease;
+    max-width: 500px;
+    height: 5em;
+    background-color: white;
+    padding: 0em 3em;
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+#expand-image {
+    width: 4em;
+    height: auto;
+    display: block;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .box{
+    height: 80vh;
+}
+
+/*
+nav img {
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+    display: block;
+}
+
+.box:hover  {
+    height: 80vh;
+}*/
+
+.Menu {
+    display: none;
+}
 
 
 
 
-@media screen and (min-width: 600px) {
+
+
 
 body {
     background-image: url(../Images/Arriere\ plan\ 2.jpg);
-    background-size: 600px; 
-    margin: auto;
-    max-width: 1500px;
+    background-size: 600px;
+    box-sizing: border-box;
+    height: 100vh;
 }
 
 header {
     position: sticky;
     top: 0%;
     z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    transition: height 2s ease;
+    max-width: 500px;
+    height: 5em;
+    background-color: white;
+    padding: 0em 3em;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#expand-image {
+    width: 4em;
+    height: auto;
+    display: block;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .box{
+    height: 80vh;
+}
+
+.Menu {
+    display: none;
+}
+
+
+
+
+
+@media screen and (min-width: 770px) {
+
+body {
+    background-image: url(../Images/Arriere\ plan\ 2.jpg);
+    background-size: 600px; 
+}
+
+header {
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+
+.box {
+    max-width: 1400px;
+    height: 0em;
 }
 
 nav {
@@ -28,9 +140,6 @@ nav {
     margin: auto;
 }
 
-.Menu-Hamburger {
-    display: none;
-}
 
 h1 {
     font-size: 3em;
@@ -38,6 +147,7 @@ h1 {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
     color: black;
 }
@@ -51,7 +161,15 @@ nav a:hover{
     background-color: #FDD734;
     transition-duration: 1s;
 }
+
+#expand-image {
+    display: none;
 }
+}
+
+
+
+
 
 section {
     background-color: white;
@@ -73,7 +191,7 @@ section {
 }
 
 /* A revoir avec JS pour adapter dynamiquement la police au bloc */
-/*.Text-box p:nth-child(1) {
+.Text-box p:nth-child(1) {
     font-size: 6.5em;
     line-height: 1px;
 }
@@ -261,4 +379,4 @@ h2 {
     text-align: center;
     margin: 0;
 }
-}*/
+
