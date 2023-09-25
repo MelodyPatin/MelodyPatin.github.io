@@ -9,12 +9,17 @@ body {
     box-sizing: border-box;
 }
 
-section, header, footer {
+section, footer {
     background-color: white;
     margin: 1em 2em 2em 2em;
     padding: 2em;
 }
 
+header{
+    background-color: white;
+    margin: 1em 2em 2em 2em;
+    padding: 1em 0;
+}
 
 a {
     text-decoration: none;
@@ -33,14 +38,68 @@ p, a {
 
 /* HEADER*/
 
-.FirstLine {
-    display: flex;
+header {
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+
+nav {  
     justify-content: space-between;
     align-items: center;
 }
 
+.Menu-Hamburger {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
 .Menu {
     padding-top: 2em;
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    border-bottom: var(--couleur-principale) solid 1px;
+}
+
+
+.navbar-checkbox {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    width: 40px;
+    height: 25px;
+    margin: 0;
+    z-index: 50;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*.checkbox-Liste {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 50;
+}
+
+.checkbox-Liste:checked ~ .Menu {
+    display: none;
+}*/
+
+.navbar-checkbox:checked ~ .Menu {
+    display: block;
+}
+
+.navbar-checkbox:checked ~ .Menu-croix {
+    display: block;
+}
+
+.navbar-checkbox:checked ~ .Menu-Hamburger {
+    display: none;
 }
 
 .Line {
@@ -51,21 +110,52 @@ p, a {
     border-radius: 2.5px;
 }
 
-h1 {
-    margin: 0;
+.Menu-croix {
+    position: relative;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: none;
 }
 
-nav a {
+.Line-Croix1, .Line-Croix2 {
+    width: 40px;
+    height: 5px;
+    background-color: black;
+}
+
+.Line-Croix1 {
+    rotate: -45deg;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.Line-Croix2 {
+    rotate: 45deg;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+h1 p {
+    margin: 0;
+    position: relative;
+    padding-left: 1em;
+    font-weight: bold;
+}
+
+.Menu a {
     display: flex;
     justify-content: flex-end;
+    font-size: 0.8em;
     line-height: 1.5em;
-    font-size: 1.2em;
     padding: 10px;
+    padding-right: 1em;
 }
 
 nav a:hover {
     background-color: var(--couleur-principale);
-    border-radius: 10px;
 }
 
 /* ACCUEIL */
@@ -206,7 +296,7 @@ h2 {
     left: 0;
     height: 100%;
     background-color: var(--couleur-principale);
-    animation: revealBackground 4s ease-in-out alternate-reverse;
+    animation: revealBackground 6s;
     animation-iteration-count: infinite;
 }
 
@@ -238,8 +328,14 @@ h2 {
     0%{
         transform: translateX(-100%);
     }
-    100% {
+    40% {
         transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
 
@@ -280,7 +376,7 @@ h2 {
 
 .circle-wrap .circle .mask.full,.circle-wrap .circle .fill {
     animation-name: rotate_Fr;
-    animation: rotate_Fr ease-in-out 4s alternate-reverse;
+    animation: rotate_Fr ease-in-out 6s;
     animation-iteration-count: infinite;
     transform: rotate(180deg)
 }
@@ -290,8 +386,14 @@ h2 {
     0% {
         transform: rotate(0deg);
     }
-    100% {
+    40% {
         transform: rotate(180deg);
+    }
+    60% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -318,7 +420,7 @@ h2 {
 
 .circle-wrap .circle .mask.full_eng,.circle-wrap .circle .fill_eng {
     animation-name: rotate_Eng;
-    animation: rotate_Eng ease-in-out 4s alternate-reverse;
+    animation: rotate_Eng  6s;
     animation-iteration-count: infinite;
     transform: rotate(155deg)
 }
@@ -327,8 +429,14 @@ h2 {
     0% {
         transform: rotate(0deg);
     }
-    100% {
+    40% {
         transform: rotate(155deg);
+    }
+    60% {
+        transform: rotate(155deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
     
 }
@@ -336,7 +444,7 @@ h2 {
 
 .circle-wrap .circle .mask.full_es,.circle-wrap .circle .fill_es {
     animation-name: rotate_Es;
-    animation: rotate_Es ease-in-out 4s alternate-reverse;
+    animation: rotate_Es 6s;
     animation-iteration-count: infinite;
     transform: rotate(135deg)
 }
@@ -345,14 +453,20 @@ h2 {
     0% {
         transform: rotate(0deg);
     }
-    100% {
+    40% {
         transform: rotate(135deg);
+    }
+    60% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
 .circle-wrap_it .circle_it .mask_it.full_it,.circle-wrap_it .circle_it .fill_it {
     animation-name: rotate_It;
-    animation: rotate_It ease-in-out 4s alternate-reverse;
+    animation: rotate_It 6s;
     animation-iteration-count: infinite;
     transform: rotate(90deg)
 }
@@ -361,8 +475,14 @@ h2 {
     0% {
         transform: rotate(0deg);
     }
-    100% {
+    40% {
         transform: rotate(90deg);
+    }
+    60% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -386,6 +506,10 @@ h2 {
     gap: 1em;
 }
 
+.icone:hover p {
+    color: white;
+}
+
 .icone img {
     width: 2.8em;
     padding: 0;
@@ -393,7 +517,7 @@ h2 {
 
 .icone p {
     font-size: 1.2em;
-    color: white;
+    color: var(--couleur-principale);
     margin: 0;
 }
 
