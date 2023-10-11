@@ -9,6 +9,7 @@ body {
     box-sizing: border-box;
     display: inline-block;
 }
+
 .bigScreen2, .bigScreen1 {
     display: inline;
 }
@@ -48,6 +49,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    padding-top: 4em;
 }
 
 nav {  
@@ -57,8 +59,9 @@ nav {
 
 .hamburgerMenu {
     position: absolute;
-    top: 2em;
+    top: 4em;
     right: 2em;
+    cursor: pointer;
 }
 
 .menu {
@@ -70,29 +73,22 @@ nav {
     border-bottom: var(--couleur-principale) solid 1px;
 }
 
-
-.navbarCheckbox {
-    position: absolute;
-    top: 2em;
-    right: 2em;
-    width: 40px;
-    height: 25px;
-    margin: 0;
-    z-index: 50;
-    opacity: 0;
-    cursor: pointer;
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 2em;
+    height: auto;
 }
 
-.navbarCheckbox:checked ~ .menu {
-    display: block;
+.menu.active a {
+    width: 100%;
 }
 
-.navbarCheckbox:checked ~ .crossMenu {
-    display: block;
-}
-
-.navbarCheckbox:checked ~ .hamburgerMenu {
-    display: none;
+.menu.active a:hover {
+    padding-right: 4em;
 }
 
 .line {
@@ -106,10 +102,14 @@ nav {
 .crossMenu {
     position: relative;
     position: absolute;
-    top: 10px;
-    right: 0;
+    top: 3.5em;
+    right: 2em;
+    width: 40px;
+    height: 40px;
     display: none;
+    cursor: pointer;
 }
+
 
 .crossLine {
     width: 40px;
@@ -121,15 +121,13 @@ nav {
 .crossLine-1 {
     rotate: -45deg;
     position: absolute;
-    top: 2em;
-    right: 2em;
+    top:50%
 }
 
 .crossLine-2 {
     rotate: 45deg;
     position: absolute;
-    top: 2em;
-    right: 2em;
+    top:50%
 }
 
 h1 {
@@ -141,7 +139,7 @@ h1 {
 }
 
 .menu a {
-    font-size: 1em;
+    font-size: 1.2em;
     display: flex;
     justify-content: flex-end;
     line-height: 1.5em;
@@ -162,6 +160,49 @@ ul{
 body{
     display: block;
 }
+
+
+.toggle-button {
+    width: 60px;
+    height: 30px;
+    background-color: var(--couleur-principale);
+    border-radius: 15px;
+    position: absolute;
+    top: 0.5em;
+    right: 3.5em;
+    cursor: pointer;
+    overflow: hidden; 
+}
+
+.toggle-switch {
+    width: 27px;
+    height: 27px;
+    background-color: white; 
+    border-radius: 50%;
+    position: absolute;
+    top:1.5px; 
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.moonIcon {
+    width: 38px;
+    padding: 0;
+    position: absolute;
+    top:5px;
+    right: 16px;
+    z-index: 400;
+}
+
+.sunIcon {
+    width: 44px;
+    padding: 0;
+    position: absolute;
+    top:0;
+    right: 115px;
+    z-index: 400;
+}
+
 
 /* PRESENTATION */
 
@@ -218,7 +259,7 @@ img {
     background-color: var(--couleur-principale);
     padding: 0.5em;
     border-radius: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
     color: white;
     transition: transform 1s;
 }
@@ -283,13 +324,13 @@ h2 {
 
 .datePlace {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.2em;
     padding-bottom: 1em;
     font-style: italic;
 }
 
 .work p {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 0.5em 0em;
     line-height: 1.2em;
 }
@@ -306,7 +347,7 @@ h2 {
 }
 
 .proSkills p {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 1em 0 0.2em 0.2em;
 }
 
@@ -332,7 +373,7 @@ h2 {
     width: 10%;
 }
 
-.backgroundMask--MySQL{
+.backgroundMask--JavaScript{
     width: 10%;
 }
 
@@ -564,6 +605,84 @@ footer{
 
 }
 
+/* DARK MODE */
+
+.darkmode {
+    background-image: url(../Images/BG/BG_dark.webp);
+    background-size: 800px;
+}
+
+.darkmode section, .darkmode header, .darkmode .menu, .darkmode footer{
+    background-color: #232323;
+}
+
+.darkmode p, .darkmode a, .darkmode h1, .darkmode h2 {
+    color: white;
+}
+
+.darkmode .skills p, .darkmode .socialMedia a, .darkmode .icon{
+    background-color: black;
+}
+
+.darkmode .infos, .darkmode header, .darkmode .menu.active{
+    border-bottom: black 1px solid;
+}
+
+.darkmode h2{
+    border : black 1px solid;
+}
+
+.darkmode .icon p {
+    color: black;
+}
+
+.darkmode .icon:hover p {
+    color: white;
+}
+
+.darkmode nav a:hover {
+    background-color: black;
+}
+
+.darkmode .toggle-button {
+    background-color: #ffffff;
+}
+
+.darkmode .toggle-switch {
+    background-color: #232323; 
+}
+
+.darkmode .line {
+    background-color: white;
+}
+
+.darkmode .crossLine {
+    background-color: white;
+}
+
+.darkmode .pourcentage {
+    border: white 1px solid;
+}
+
+.darkmode .backgroundMask {
+    background-color: white;
+}
+
+.darkmode .circleWrap {
+    background: #232323;
+    border: white solid 1px;
+}
+
+.darkmode .circleWrap .circle .mask .fill {
+    background-color: white;
+}
+
+.darkmode .insideCircle {
+    background: #232323;
+    border: white solid 1px;
+    color: white;
+}
+
 
 /* SCREEN + 768PX */
 
@@ -580,7 +699,7 @@ footer {
 
 
 header{
-    padding: 2em 0;
+    padding: 4em 0em 2em 0em;
     margin: 2em 4em;
 }
 
@@ -659,6 +778,10 @@ nav {
     display: none;
 }
 
+.crossMenu{
+    display: none;
+}
+
 .menu {
     display: flex;
     justify-content: flex-end;
@@ -681,7 +804,6 @@ nav {
 
 nav a:hover {
     background-color: var(--couleur-principale);
-    padding-top: 5%;
     transition-duration: 1s;
 }
 
@@ -739,10 +861,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     column-gap: 2em;
-}
-
-footer {
-    display: none;
 }
 
 .bigScreen1{

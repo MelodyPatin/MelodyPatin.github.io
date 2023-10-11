@@ -5,12 +5,12 @@
             <p>Je suis Mélody </p>
             <p>Je suis une future développeuse web</p>
         </div>
-        <img src="../Images/PROFIL/PROFIL_bleu_carre.png" alt="Ma photo de profil">
+            <img class="profilImage" src="../Images/PROFIL/PROFIL_bleu_carre.png" alt="Ma photo de profil">
     </div>
     <div class="contact">
         <div class="contactList">
             <?php foreach($contact as $contactLabel => $contactLink ): ?>
-                <a href="<?=$contactLink?>"><?=$contactLabel?></a><br>
+                <a id="profilImage" href="<?=$contactLink?>"><?=$contactLabel?></a><br>
             <?php endforeach ?>
         </div>
         <div class="socialMedia">

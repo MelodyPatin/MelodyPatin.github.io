@@ -12,19 +12,6 @@ $nav = [
     "Loisirs"=>"#hobbiesPoint",
 ];
 
-/*if(isset($_POST['screenWidth']) && $_POST['screenWidth'] >= 1900) {
-    unset($nav["Présentation"]);
-    unset($nav["Expériences"]);
-}
-
-// Générer le menu de navigation mis à jour
-$menuHtml = '';
-foreach($nav as $navigationLabel => $navigationLink) {
-    $menuHtml .= '<a href="' . $navigationLink . '">' . $navigationLabel . '</a>';
-}
-
-echo $menuHtml; // Envoyer la structure de navigation mise à jour en réponse
-*/
 //PRESENTATION
 
 $contact = [
@@ -110,7 +97,7 @@ $skills = [
     "HTML5" => "HTML",
     "CSS3" => "CSS3",
     "PHP" => "PHP",
-    "MySQL" => "MySQL",
+    "JavaScript" => "JavaScript",
     "SketchUp" => "SketchUp",
     "FileMaker" => "FileMaker",
 ];

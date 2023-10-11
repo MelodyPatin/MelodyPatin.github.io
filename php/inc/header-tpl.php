@@ -18,7 +18,7 @@
     <header>
         <nav>
             <h1>Mélody Patin</h1>
-            <input type="checkbox" class="navbarCheckbox">
+
             <div class="hamburgerMenu">
                 <?php 
                 $numLines = 3;
@@ -35,6 +35,12 @@
                         <a href="<?=$navigationLink?>"><?=$navigationLabel?></a>
                     <?php endforeach; ?>
             </div>
+            <div class="toggle-button">
+                <div class="toggle-switch"></div>
+            </div>
+            <img class="moonIcon" src="../Images/ICONES/ICONE_blueMoon.png" alt="icone lune">
+            <img class="sunIcon" src="../Images/ICONES/ICONE_blueSun.png" alt="icone soleil">
+
         </nav>
     </header>
     
