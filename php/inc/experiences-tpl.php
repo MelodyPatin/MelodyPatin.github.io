@@ -2,7 +2,7 @@
 <div class="bigScreen2">
     <section id="experiences">
         <div class="titleCenter">
-            <h2>Expériences professionnelles</h2>
+            <h2><?=$sectionTitles[0]?></h2>
         </div>
         <?php 
         $totalExperiences = count($experiences);

@@ -1,11 +1,11 @@
 <section id="presentation">
     <div class="picture">
         <div class="textBox">
-            <p>Bonjour,</p>
-            <p>Je suis Mélody </p>
-            <p>Je suis une future développeuse web</p>
+            <p><?=$text[0]?></p>
+            <p><?=$text[1]?></p>
+            <p><?=$text[2]?></p>
         </div>
-            <img class="profilImage" src="../Images/PROFIL/PROFIL_bleu_carre.png" alt="Ma photo de profil">
+            <img class="profilImage" src="../Images/PROFIL/PROFIL_blue.png" alt="Ma photo de profil">
     </div>
     <div class="contact">
         <div class="contactList">

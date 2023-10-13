@@ -12,7 +12,13 @@ $nav = [
     "Loisirs"=>"#hobbiesPoint",
 ];
 
+$currentLanguage = "FR";
+
+$languagesList = ["EN", "ES", "IT"];
+
 //PRESENTATION
+
+$text = [ "Bonjour,", "Je suis Mélody", "Je suis une future développeuse web"];
 
 $contact = [
     "<p>Contactez-moi</p>"=>"",
@@ -26,6 +32,8 @@ $social = [
     "GitHub"=>"https://github.com/MelodyPatin",
     "Instagram"=>"https://www.instagram.com/melody.patin/",
 ];
+
+$sectionTitles = ["Expériences professionnelles", "Formations", "Compétences", "Portfolio", "Loisirs" ];
 
 //EXPERIENCES 
 

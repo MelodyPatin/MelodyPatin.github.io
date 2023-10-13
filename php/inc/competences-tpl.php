@@ -1,6 +1,6 @@
 <section id="skills">
     <div class="titleCenter">
-        <h2>Compétences</h2>
+        <h2><?=$sectionTitles[2]?></h2>
     </div>
     <div class="proSkills">
         <?php foreach ($skills as $skill => $skillClass): ?>

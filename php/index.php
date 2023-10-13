@@ -1,6 +1,12 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../js/script.js"></script> 
+<script src="../js/animationSkills.js"></script> 
+<script src="../js/languagesThemes.js"></script> 
+<script src="../js/languagesBar.js"></script> 
+<script src="../js/scaleText.js"></script> 
+<script src="../js/darkMode.js"></script> 
+<script src="../js/navigationBar.js"></script> 
+<script src="../js/app.js"></script> 
 
 
 

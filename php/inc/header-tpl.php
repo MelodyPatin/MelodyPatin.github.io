@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style3.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Mélody Patin</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,8 +17,18 @@
 <div class="bigScreen1">
     <header>
         <nav>
+        <div class="languages">
+            <p class="currentLanguage"><?php echo $currentLanguage; ?></p>
+            <ul class="listOfLanguages">
+                <?php foreach ($languagesList as $language) { ?>
+                    <li >
+                        <a href="#" class="languageLink" data-lang="<?php echo $language; ?>"><?php echo $language; ?></a></li>
+                <?php } ?>    
+            </ul>
+            <img class="leftArrow" src="../Images/ICONES/ICONE_whiteLeftArrow.png" alt="Icone flèche">
+            <img class="rightArrow" src="../Images/ICONES/ICONE_whiteRightArrow.png" alt="Icone flèche">
+        </div>
             <h1>Mélody Patin</h1>
-
             <div class="hamburgerMenu">
                 <?php 
                 $numLines = 3;
@@ -37,9 +47,10 @@
             </div>
             <div class="toggle-button">
                 <div class="toggle-switch"></div>
-            </div>
-            <img class="moonIcon" src="../Images/ICONES/ICONE_blueMoon.png" alt="icone lune">
+                <img class="moonIcon" src="../Images/ICONES/ICONE_blueMoon.png" alt="icone lune">
             <img class="sunIcon" src="../Images/ICONES/ICONE_blueSun.png" alt="icone soleil">
+            </div>
+           
 
         </nav>
     </header>

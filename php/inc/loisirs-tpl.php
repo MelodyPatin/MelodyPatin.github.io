@@ -1,6 +1,6 @@
 <section id="hobbies">
     <div class="titleCenter">
-        <h2>Loisirs</h2>
+        <h2><?=$sectionTitles[4]?></h2>
     </div>
     <div class="hobbies">
         <?php foreach($hobbies as $hobbieLabel => $hobbiesImg): ?>

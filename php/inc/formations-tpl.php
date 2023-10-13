@@ -1,6 +1,6 @@
 <section id="education">
     <div class="titleCenter">
-        <h2>Formations</h2>
+        <h2><?=$sectionTitles[1]?></h2>
     </div>
     <?php foreach ($educations as $education => $educationList):?>
         <div class="infos">
