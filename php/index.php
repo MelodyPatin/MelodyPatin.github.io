@@ -6,12 +6,22 @@
 <script src="../js/scaleText.js"></script> 
 <script src="../js/darkMode.js"></script> 
 <script src="../js/navigationBar.js"></script> 
+<script src="../js/translation.js"></script> 
 <script src="../js/app.js"></script> 
 
 
 
 <?php
-    include "data.php";
+    $languageData = "FR";
+    if (isset($_GET['lang'])) {
+        $selectedLang = $_GET['lang'];
+    
+        if (in_array($selectedLang, ['FR', 'EN'])) {
+            $languageData = $selectedLang;
+        }
+    }
+
+    include "data_" . $languageData . ".php";
     include "inc/header-tpl.php";
     include "inc/presentation-tpl.php";
     include "inc/experiences-tpl.php";

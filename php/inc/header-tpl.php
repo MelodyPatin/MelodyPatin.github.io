@@ -22,7 +22,7 @@
             <ul class="listOfLanguages">
                 <?php foreach ($languagesList as $language) { ?>
                     <li >
-                        <a href="#" class="languageLink" data-lang="<?php echo $language; ?>"><?php echo $language; ?></a></li>
+                        <a href="?lang=<?php echo $language; ?>" class="languageLink" data-lang="<?php echo $language; ?>"><?php echo $language; ?></a></li>
                 <?php } ?>    
             </ul>
             <img class="leftArrow" src="../Images/ICONES/ICONE_whiteLeftArrow.png" alt="Icone flèche">
