@@ -28,24 +28,24 @@ const languagesThemes = {
         localStorage.setItem("selectedTheme", selectedLanguage);
 
         if (darkMode.body.classList.contains("EN") && !darkMode.body.classList.contains("darkmode")) {
-            darkMode.profilImage.src = 'Images/PROFIL/PROFIL_green.png';
-            darkMode.moonIcon.src = 'Images/ICONES/ICONE_greenMoon.png';
-            darkMode.sunIcon.src = 'Images/ICONES/ICONE_greenSun.png';
+            darkMode.profilImage.src = '../Images/PROFIL/PROFIL_green.png';
+            darkMode.moonIcon.src = '../Images/ICONES/ICONE_greenMoon.png';
+            darkMode.sunIcon.src = '../Images/ICONES/ICONE_greenSun.png';
         }
         if (darkMode.body.classList.contains("ES")&& !darkMode.body.classList.contains("darkmode")){
-            darkMode.profilImage.src = 'Images/PROFIL/PROFIL_yellow.png';
-            darkMode.moonIcon.src = 'Images/ICONES/ICONE_yellowMoon.png';
-            darkMode.sunIcon.src = 'Images/ICONES/ICONE_yellowSun.png';
+            darkMode.profilImage.src = '../Images/PROFIL/PROFIL_yellow.png';
+            darkMode.moonIcon.src = '../Images/ICONES/ICONE_yellowMoon.png';
+            darkMode.sunIcon.src = '../Images/ICONES/ICONE_yellowSun.png';
         } 
         if (darkMode.body.classList.contains("IT")&& !darkMode.body.classList.contains("darkmode")){
-            darkMode.profilImage.src = 'Images/PROFIL/PROFIL_red.png';
-            darkMode.moonIcon.src = 'Images/ICONES/ICONE_redMoon.png';
-            darkMode.sunIcon.src = 'Images/ICONES/ICONE_redSun.png';
+            darkMode.profilImage.src = '../Images/PROFIL/PROFIL_red.png';
+            darkMode.moonIcon.src = '../Images/ICONES/ICONE_redMoon.png';
+            darkMode.sunIcon.src = '../Images/ICONES/ICONE_redSun.png';
         } 
         if (darkMode.body.classList.contains("FR")&& !darkMode.body.classList.contains("darkmode")){
-            darkMode.profilImage.src = 'Images/PROFIL/PROFIL_blue.png';
-            darkMode.moonIcon.src = 'Images/ICONES/ICONE_blueMoon.png';
-            darkMode.sunIcon.src = 'Images/ICONES/ICONE_blueSun.png';
+            darkMode.profilImage.src = '../Images/PROFIL/PROFIL_blue.png';
+            darkMode.moonIcon.src = '../Images/ICONES/ICONE_blueMoon.png';
+            darkMode.sunIcon.src = '../Images/ICONES/ICONE_blueSun.png';
         }
     }
         

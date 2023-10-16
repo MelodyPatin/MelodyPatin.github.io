@@ -1,0 +1,69 @@
+.left {
+    padding: 2em;
+}
+
+.flex {
+    display: flex;
+}
+
+section {
+    width: 100%;
+}
+
+.right {
+    background-image: url(../images/voitures.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #006A53;
+}
+
+h2 {
+    font-size: 2em;
+    color: #006A53;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+fieldset {
+    border: none;
+}
+
+button {
+    color: white;
+    background-color: #006A53;
+    padding: 1em;
+    font-size: 1em;
+}
+
+.color {
+    padding: 0.2em;
+}
+
+.color-Rouge {
+    background-color: red;
+}
+
+.color-Vert {
+    background-color: green;
+}
+
+.color-Bleu {
+    background-color: blue;
+}
+
+.color-Orange {
+    background-color: orange;
+}
+
+.color-Refus {
+    background-color: grey;
+}
+

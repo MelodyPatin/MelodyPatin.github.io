@@ -22,6 +22,7 @@ const languagesBar = {
         // Ajoutez un écouteur de clic à chaque lien de langue
         document.querySelectorAll(".languageLink").forEach(function (link) {
             link.addEventListener("click", function (event) {
+                event.preventDefault();
                 const newLanguage = link.getAttribute("data-lang");
                 languagesBar.updateLanguage(newLanguage);
             });
@@ -59,6 +60,22 @@ const languagesBar = {
         languagesBar.rightArrowElement.style.display = "block";
     },
 
+    // Fonction pour mettre à jour la langue actuelle
+    updateLanguage: function (newLanguage) {
+        if (newLanguage !== languagesBar.currentLanguage) {
+            // Échangez la langue actuelle avec la langue sélectionnée
+            const selectedLanguageElement = document.querySelector(".languageLink[data-lang='" + newLanguage + "']");
+            if (selectedLanguageElement) {
+                const selectedLanguage = selectedLanguageElement.textContent;
+                selectedLanguageElement.textContent = languagesBar.currentLanguage;
+                selectedLanguageElement.setAttribute("data-lang", languagesBar.currentLanguage);
+                languagesBar.currentLanguage = newLanguage;
+    
+                // Mettez à jour la langue actuelle sur the page
+                languagesBar.currentLanguageElement.textContent = languagesBar.currentLanguage;
+            }
+        }
+    },
 };
 
 
